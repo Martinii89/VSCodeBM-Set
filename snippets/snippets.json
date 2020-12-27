@@ -1,0 +1,114 @@
+{
+	"Button": 
+	{
+		"prefix": ["0|", "button"],
+		"body": [
+			"0|${1:label}|${2:command}", "$0"
+		],
+		"description": "Will execute command when button is pressed"
+	},
+	"Checkbox": 
+	{
+		"prefix": ["1|", "checkbox"],
+		"body": [
+			"1|${1:label}|${2:cvar}", "$0"
+		],
+		"description": "Will set cvar to true or false"
+	},
+	"Float range slider": 
+	{
+		"prefix": ["2|", "float-range-slider"],
+		"body": [
+			"2|${1:label}|${2:cvar}|${3:min_val}|${4:max_val}", "$0"
+		],
+		"description": "Range slider allowing the user to select a range (float)."
+	},
+	"Integer range slider": 
+	{
+		"prefix": ["3|", "int-range-slider"],
+		"body": [
+			"3|${1:label}|${2:cvar}|${3:min_val}|${4:max_val}", "$0"
+		],
+		"description": "Range slider allowing the user to select a range (int)."
+	},
+	"Float  slider": 
+	{
+		"prefix": ["4|", "float-slider"],
+		"body": [
+			"4|${1:label}|${2:cvar}|${3:min_val}|${4:max_val}", "$0"
+		],
+		"description": "Slider allowing the user to select one value (float)"
+	},
+	"Integer  slider": 
+	{
+		"prefix": ["5|", "int-slider"],
+		"body": [
+			"5|${1:label}|${2:cvar}|${3:min_val}|${4:max_val}", "$0"
+		],
+		"description": "Slider allowing the user to select one value(int)"
+	},
+	"Combobox": 
+	{
+		"prefix": ["6|", "combobox"],
+		"body": [
+			"6|${1:label}|${2:cvar}|${3:item-label1}=${4:item-value1}&${5:item-label2}=${6:item-value2}", "$0"
+		],
+		"description": "A combobox. options=items inside the combobox in the form of label@value, separated by &."
+	},
+	"Sameline": 
+	{
+		"prefix": ["7|", "sameline"],
+		"body": [
+			"7|", "$0"
+		],
+		"description": "Will make it so the item declared under this component is on the same line as the item declared above this component"
+	},
+	"Separator": 
+	{
+		"prefix": ["8|", "seperator"],
+		"body": [
+			"8|", "$0"
+		],
+		"description": "Will insert a separator line at this position"
+	},
+	"Label": 
+	{
+		"prefix": ["9|", "label"],
+		"body": [
+			"9|${1:label}", "$0"
+		],
+		"description": "Will simply render the label, has the ability to display cvar values"
+	},
+	"Dynamic Label": 
+	{
+		"prefix": ["9|", "dynamic-label"],
+		"body": [
+			"9|$${1:cvar}$", "$0"
+		],
+		"description": "Replaces a cvar surrouned with $ - with the cvar value"
+	},
+	"Grayed component": 
+	{
+		"prefix": ["10|", "disable", "grayed-component"],
+		"body": [
+			"10|${1:!}${2:cvar}", "\t$0", "11|"
+		],
+		"description": "Will disable all components below if the evaluated cvar is false until grayed component end is found. Grayed components can be nested. An \"inverted\" option is available by adding '!' to the front of the cvar name. This will invert the cvar's boolean value. i.e. \"10|!cvar\""
+	},
+	"Textbox": 
+	{
+		"prefix": ["12|", "textbox"],
+		"body": [
+			"12|${1:cvar}", "$0"
+		],
+		"description": "Will set cvar value equal to whatever is in the textbox."
+	},
+	"Color Edit": 
+	{
+		"prefix": ["13|", "color"],
+		"body": [
+			"13|${1:label}|${2:cvar}", "$0"
+		],
+		"description": "A color picker for LinearColor cvars. Provides RGBA color in 0-255 range."
+	}
+}
